@@ -15,7 +15,6 @@ const workoutSchema = new mongoose.Schema({
   },
   isComplete: {
     type: Boolean,
-    required: true,
     default: false
   },
   owner: {
