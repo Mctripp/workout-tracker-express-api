@@ -35,7 +35,16 @@ router.get('/workouts', requireToken, (req, res, next) => {
       // `workouts` will be an array of Mongoose documents
       // we want to convert each one to a POJO, so we use `.map` to
       // apply `.toObject` to each one
-      return workouts.map(workout => workout.toObject())
+      // Also sorting by date before return
+      return workouts.map(workout => workout.toObject()).sort((a, b) => {
+        if (a.date_time > b.date_time) {
+          return -1
+        }
+        if (a.date_time < b.date_time) {
+          return 1
+        }
+        return 0
+      })
     })
     // respond with status 200 and JSON of the workouts
     .then(workouts => res.status(200).json({ workouts: workouts }))
