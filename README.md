@@ -1,5 +1,7 @@
 [App name] is an app intended for users to create and manage their workout routines. Users can create, edit, and delete their workouts, view all workouts, and view individual workouts.
 
+[Deployed App](https://mctripp.github.io/workout-tracker-client/#/)
+[Deployed Backend](https://workout-tracker-express-api.herokuapp.com/)
 [Workout Tracker Client (frontend)](https://github.com/Mctripp/workout-tracker-client)
 
 ## Tech Used
